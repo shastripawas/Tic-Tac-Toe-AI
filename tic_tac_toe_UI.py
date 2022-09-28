@@ -4,9 +4,9 @@ import sys
 import time
 from pygame.locals import *
 from moves import findBestMove
-
+import os;
 # declaring the global variables
-
+cd=os.getcwd()
 # for storing the 'x' or 'o'
 # value as character
 XO = 'x'
@@ -55,9 +55,9 @@ screen = pg.display.set_mode((width, height + 100), 0, 32)
 pg.display.set_caption("My Tic Tac Toe")
 
 # loading the images as python object
-initiating_window = pg.image.load("modified_cover.png")
-x_img = pg.image.load("X_modified.png")
-y_img = pg.image.load("o_modified.png")
+initiating_window = pg.image.load(cd+"/Images/modified_cover.png")
+x_img = pg.image.load(cd+"/Images/X_modified.png")
+y_img = pg.image.load(cd+"/Images/o_modified.png")
 
 # resizing images
 initiating_window = pg.transform.scale(initiating_window, (width, height + 100))
